@@ -17,22 +17,16 @@ def add(a: float, b: float) -> float:
         >>> add(-3.0, 1.0)
         -2.0
     """
-    raise NotImplementedError
+    return a+b
 
 
 def safe_divide(a: float, b: float) -> float:
-    """
-    Divide `a` by `b`. Raise ValueError when `b` is zero.
 
-    Examples:
-        >>> safe_divide(6.0, 3.0)
-        2.0
-        >>> safe_divide(1.0, 0.0)
-        Traceback (most recent call last):
-            ...
-        ValueError: denominator must not be zero
-    """
-    raise NotImplementedError
+    if b==0:
+        raise ValueError("denominator must not be zero")
+    else:
+        return a/b
+
 
 def average(xs: List[float]) -> float:
     """
@@ -46,4 +40,7 @@ def average(xs: List[float]) -> float:
             ...
         ValueError: xs must not be empty
     """
-    raise NotImplementedError
+    if len (xs)==0:
+        raise ValueError("xs must not be empty")
+    else:
+        return sum(xs)/len(xs)
