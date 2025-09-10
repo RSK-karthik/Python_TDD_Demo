@@ -47,5 +47,5 @@ def test_average_parametrized(values, expected):
 
 
 def test_average_raises_on_empty():
-    with pytest.raises(ValueError, match="xs must not be empty"):
+    with pytest.raises(ValueError, match="values must not be empty"):
         average([])
